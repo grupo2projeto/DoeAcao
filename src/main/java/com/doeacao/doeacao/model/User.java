@@ -34,10 +34,10 @@ public class User {
 	@NotBlank (message = "O atributo name é obrigatório!")
 	@Size (min=2, max =255, message = "O atributo name deve conter no mínimo 2 e no máximo 255 catacteres!")
 	private String name;
-	
+
 	@Schema(example = "email@email.com.br")
-	@NotBlank (message = "O atributo email é obrigatório!")
-	@Email
+	@NotNull(message = "O Atributo Usuário é Obrigatório!")
+	@Email(message = "O Atributo Usuário deve ser um email válido!")
 	private String user;
 	
 	@CPF
